@@ -1,10 +1,12 @@
 package view;
 
+import model.Management;
+
 public class Runner {
 
 	public static void main(String[] args) {
-		System.out.println("taller colab");
-
+		Management obj = new Management("sogamoso ciudad del sol y del acero");
+		System.out.println(obj.ownName());
 	}
 
 }

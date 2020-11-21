@@ -7,5 +7,11 @@ public class Management {
 		this.TEXT_STRING = TEXT_STRING;
 	}
 	
+	public String ownName() {
+//		System.out.println(ToolsForName.convert("hola"));
+		ToolsForName toolsForname = new ToolsForName(TEXT_STRING);
+		return toolsForname.result();
+	}
+	
 
 }
