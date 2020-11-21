@@ -8,7 +8,6 @@ public class Management {
 	}
 	
 	public String ownName() {
-//		System.out.println(ToolsForName.convert("hola"));
 		ToolsForName toolsForname = new ToolsForName(TEXT_STRING);
 		return toolsForname.result();
 	}
