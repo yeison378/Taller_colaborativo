@@ -26,8 +26,9 @@ public class Management {
 		return toolsForname.result();
 	}
 	
+
 	/**
-	 * @param texto a encriptar
+	 * @param text texto a encriptar
 	 * @return texto encriptado
 	 */
 	public static String encrypt(String text) {
@@ -43,8 +44,9 @@ public class Management {
 		return modifiedText;
 	}
 	
+	
 	/**
-	 * @param texto encriptado
+	 * @param text texto encriptado
 	 * @return texto desencriptado
 	 */
 	public static String decrypt(String text) {
