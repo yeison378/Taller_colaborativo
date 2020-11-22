@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author yeison_Medina
  *
  */
-public class ToolsForName {
+public class TextTools {
 
 	/**
 	 * Guarda palabras
@@ -17,7 +17,7 @@ public class ToolsForName {
 	/**
 	 * @param text cadena de caracteres con la que se va a trabajar
 	 */
-	public ToolsForName(String text) {
+	public TextTools(String text) {
 		this.text = text;
 		modifiedText = new ArrayList<>();
 	}
@@ -74,6 +74,22 @@ public class ToolsForName {
 			string += modifiedText.get(i);
 		}
 		return string.substring(0, string.length() - 1);
+	}
+	
+	/**
+	 * @param character caracter a verificar su existencia dentro de la cadena de inteseccion
+	 * @param string cadena formada apartir de la interseccion entre cadenas
+	 * @return verdadero si el caracter no esta o falso si se encuentra
+	 */
+	public static boolean identifyRepeatingData(String character,String string) {
+		int indicator = 0;
+		for (int i = 0; i < string.length(); i++) {
+			if(string.substring(i, i+1).equalsIgnoreCase(character)) {
+				indicator++;
+			}
+		}
+		if(indicator>0)return false;
+		else return true;
 	}
 
 }

@@ -1,5 +1,4 @@
 package model;
-
 /**
  * @author yeison_Medina
  *
@@ -22,7 +21,7 @@ public class Management {
 	 * @return Nombre propio
 	 */
 	public String ownName() {
-		ToolsForName toolsForname = new ToolsForName(TEXT_STRING);
+		TextTools toolsForname = new TextTools(TEXT_STRING);
 		return toolsForname.result();
 	}
 	
@@ -60,6 +59,25 @@ public class Management {
 			originalText+=Character.toString(character);
 		}
 		return originalText;
+	}
+
+
+	/**
+	 * @param text texto a comparar con texto principal(TEXT_STRING)
+	 * @return cadena formada por las intersecciones entre la cadena de entrada y la principal
+	 */
+	public String intersection(String text) {
+		String intersectingText = "";
+		for (int i = 0; i < text.length(); i++) {
+			for (int j = 0; j < TEXT_STRING.length(); j++) {
+				if(text.substring(i, i+1).equalsIgnoreCase(TEXT_STRING.substring(j, j+1))) {
+					if(TextTools.identifyRepeatingData(text.substring(i, i+1), intersectingText)) {
+						intersectingText += TEXT_STRING.substring(j, j+1);
+					}
+				}
+			}
+		}
+		return intersectingText;
 	}
 	
 
