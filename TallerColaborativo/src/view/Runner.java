@@ -13,6 +13,7 @@ public class Runner {
 		System.out.println("Encriptada : "+b);
 		System.out.println("Deencriptada : "+Management.decrypt(b));
 		System.out.println("Interseccion : "+obj.intersection("colombia"));
+		System.out.println("Diferencia : "+obj.difference("colombia"));
 	}
 
 }

@@ -80,5 +80,19 @@ public class Management {
 		return intersectingText;
 	}
 	
+	/**
+	 * @param text texto a comparar con texto principal(TEXT_STRING)
+	 * @return cadena formada por la diferencia entre cadenas 
+	 */
+	public String difference(String text) {
+		String modifiedText = TEXT_STRING;
+		String result = "";
+		for (int i = 0; i < text.length(); i++) {
+			result = modifiedText.replaceAll(text.substring(i, i+1), "");
+			modifiedText = result;
+		}
+		return result;
+	}
+	
 
 }
