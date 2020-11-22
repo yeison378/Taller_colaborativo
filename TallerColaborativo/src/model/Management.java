@@ -1,16 +1,35 @@
 package model;
 
+/**
+ * @author yeison_Medina
+ *
+ */
 public class Management {
+	
+	/**
+	 * Texto inmutable con el que se va a trabajar
+	 */
 	private final String TEXT_STRING;
+	
+	/**
+	 * @param TEXT_STRING texto inmodificable
+	 */
 	public Management (String TEXT_STRING) {
 		this.TEXT_STRING = TEXT_STRING;
 	}
 	
+	/**
+	 * @return Nombre propio
+	 */
 	public String ownName() {
 		ToolsForName toolsForname = new ToolsForName(TEXT_STRING);
 		return toolsForname.result();
 	}
 	
+	/**
+	 * @param texto a encriptar
+	 * @return texto encriptado
+	 */
 	public static String encrypt(String text) {
 		String modifiedText="";
 		char character;
@@ -24,6 +43,10 @@ public class Management {
 		return modifiedText;
 	}
 	
+	/**
+	 * @param texto encriptado
+	 * @return texto desencriptado
+	 */
 	public static String decrypt(String text) {
 		String originalText="";
 		char character;
