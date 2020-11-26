@@ -1,10 +1,15 @@
 package view;
 
+import javax.swing.JOptionPane;
+
 import model.Management;
 
 public class Runner {
 
 	public static void main(String[] args) {
+	
+		
+
 		String palabra = "sogamoso ciudad del sol y del acero";
 		System.out.println("Entrada :"+palabra);
 		Management obj = new Management(palabra);
