@@ -94,11 +94,11 @@ public class Management {
 	 * @param address
 	 * @return auxChain
 	 */
-	public String fillCharacters(char character, int limit, int address) {
+	public String fillCharacters(char character, int limit, String address) {
 		String chainModified = "";
 		String auxChain = TEXT_STRING;
 		for (int i = 0; i < limit; i++) {
-			if (address == 1) {
+			if (address.equals("Izquierda")) {
 				chainModified = character + auxChain;
 			} else {
 				chainModified = auxChain + character;
@@ -167,9 +167,9 @@ public class Management {
 	 * @param address
 	 * @return fill(chain)
 	 */
-	public String deleteComparing(String word, int address) {
-
-		if (address == 1) {
+	public String deleteComparing(String word, String address) {
+		//1-izquierda
+		if (address.equals("Izquierda")) {
 
 			String[] chain = TEXT_STRING.split("");
 			String[] characters = word.split("");

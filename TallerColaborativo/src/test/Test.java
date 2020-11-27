@@ -38,7 +38,7 @@ public class Test {
 	public void testfillCharacters() {
 		char character = 'A';
 		int limit = 4;
-		int address = 1;
+		String address = "Izquierda";
 		assertEquals("AAAAsogamoso ciudad del sol y del acero", management.fillCharacters(character, limit, address));
 	}
 	
@@ -61,7 +61,7 @@ public class Test {
 	@org.junit.Test
 	public void testdeleteComparing() {
 		String word = "curador";
-		int address = 2;
+		String address = "Derecha";
 		assertEquals("sogamoso ciudad del sol y del ace", management.deleteComparing(word, address));
 	}
 	
